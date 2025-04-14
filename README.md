@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# Jogo da Velha (Tic-Tac-Toe) com React e TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Equipe:** projeto X
 
-Currently, two official plugins are available:
+**Data:** 14 de abril de 2025
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visão Geral
 
-## Expanding the ESLint configuration
+Este projeto é uma implementação clássica do Jogo da Velha (Tic-Tac-Toe) utilizando tecnologias web modernas: React para a interface de usuário componentizada e TypeScript para adicionar segurança de tipos ao JavaScript. O projeto foi desenvolvido como um exercício prático para demonstrar o uso de componentes funcionais, Hooks do React (especificamente `useState`), manipulação de eventos, lógica de jogo e estilização básica com CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* **React:** Biblioteca JavaScript para construir interfaces de usuário.
+* **TypeScript:** Superset do JavaScript que adiciona tipagem estática opcional.
+* **Vite:** Ferramenta de build e servidor de desenvolvimento rápido para projetos web modernos.
+* **CSS:** Para estilização básica dos componentes.
+* **Node.js / npm:** Ambiente de execução e gerenciador de pacotes.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Tabuleiro 3x3 clássico do Jogo da Velha.
+* Jogabilidade para dois jogadores ('X' e 'O') com turnos alternados.
+* Detecção automática de vencedor (linhas, colunas e diagonais).
+* Detecção de empate quando o tabuleiro está cheio sem vencedor.
+* Exibição do status atual do jogo (próximo jogador, vencedor ou empate).
+* Botão para reiniciar o jogo a qualquer momento.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Como Começar
+
+Siga estas instruções para configurar e rodar o projeto localmente.
+
+### Pré-requisitos
+
+* Node.js (versão 16 ou superior recomendada)
+* npm (geralmente vem com o Node.js) ou yarn
+
+### Instalação
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/Icaro-Costa/Jogo-da-velha
+    cd jogo-da-velha-react-ts
+    ```
+    *(Se você não estiver usando Git, apenas certifique-se de estar na pasta raiz do projeto)*
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+    *(ou `yarn install` se preferir o Yarn)*
+
+## Rodando o Projeto
+
+Para iniciar o servidor de desenvolvimento local:
+
+```bash
+npm run dev
