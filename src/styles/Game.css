@@ -1,0 +1,103 @@
+body {
+    font: 16px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-board {
+    margin-bottom: 20px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    min-height: 1.5em; 
+    color: #333;
+  }
+  
+  .square {
+    background: #fff;
+    border: 2px solid #999;
+    float: left;
+    font-size: 48px; 
+    font-weight: bold;
+    line-height: 60px; 
+    height: 60px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s ease;
+  }
+  
+  .square:hover {
+      background-color: #eee;
+  }
+  
+  .square:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px rgba(0, 123, 255, 0.5); 
+  }
+  
+  .board-row:last-child .square {
+    border-bottom-width: 2px;
+  }
+  .square:last-child {
+    border-right-width: 2px;
+  }
+  
+  
+  .game-info {
+    margin-left: 20px;
+    margin-top: 10px; 
+  }
+  
+  .reset-button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
+  }
+  
+  .reset-button:hover {
+      background-color: #0056b3;
+  }
+  
+  h1 {
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .App {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
