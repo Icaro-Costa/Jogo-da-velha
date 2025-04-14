@@ -3,14 +3,12 @@ import Board from './Board';
 import { Player } from '../types/gameTypes';
 
 const Game: React.FC = () => {
+  const [squares, setSquares] = useState<Player[]>(Array(9).fill(null)); 
 
-  const [squares, setSquares] = useState<Player[]>(Array(9).fill(null));
-
-  const [xIsNext, setXIsNext] = useState<boolean>(true);
-
+  const [xIsNext, setXIsNext] = useState<boolean>(true); 
   function handlePlay(nextSquares: Player[]) {
-    setSquares(nextSquares); 
-    setXIsNext(!xIsNext);    
+    setSquares(nextSquares);
+    setXIsNext(!xIsNext); 
   }
 
   function handleReset() {
@@ -21,13 +19,13 @@ const Game: React.FC = () => {
   return (
     <div className="game">
       <div className="game-board">
+        { }
         <Board squares={squares} onPlay={handlePlay} xIsNext={xIsNext} />
       </div>
       <div className="game-info">
         <button onClick={handleReset} className="reset-button">
-        Jogar Novamente
+        Reiniciar o jogo
         </button>
-        { }
       </div>
     </div>
   );

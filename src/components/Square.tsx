@@ -1,14 +1,16 @@
 import React from 'react';
 import { Player } from '../types/gameTypes';
+
 interface SquareProps {
-  value: Player;      
-  onSquareClick: () => void; 
+  value: Player;
+  index: number;
+  onSquareClick: () => void;
 }
 
-const Square: React.FC<SquareProps> = ({ value, onSquareClick }) => {
+const Square: React.FC<SquareProps> = ({ value, index, onSquareClick }) => {
   return (
     <button className="square" onClick={onSquareClick}>
-      {value}
+      {value === null ? index : value}
     </button>
   );
 };
