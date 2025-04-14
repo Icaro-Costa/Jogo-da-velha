@@ -1,6 +1,7 @@
 # Jogo da Velha com React e TypeScript
 
 **Equipe:** projeto X
+
 **Data:** 14 de abril de 2025
 
 ## Visão Geral
